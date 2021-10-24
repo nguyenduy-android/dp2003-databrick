@@ -9,6 +9,9 @@
 // MAGIC </br>
 // MAGIC https://docs.microsoft.com/en-us/azure/databricks/data/data-sources/azure/adls-gen2/azure-datalake-gen2-get-started
 // MAGIC </br>
+// MAGIC https://docs.microsoft.com/en-us/azure/data-factory/format-parquet
+// MAGIC </br>
+// MAGIC https://docs.microsoft.com/en-us/azure/data-factory/author-global-parameters
 
 // COMMAND ----------
 
