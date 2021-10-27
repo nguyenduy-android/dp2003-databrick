@@ -63,18 +63,9 @@ import java.time.OffsetDateTime
 
 val containerName = "databrickparquets"
 val storageAccountName = "ilearndlstorgen2"
-val pathToProcess = s"abfss://${containerName}@${storageAccountName}.dfs.core.windows.net/dbo.Person.parquet"
+val pathToProcess = s"abfss://${containerName}@${storageAccountName}.dfs.core.windows.net/dbo.${dbTable}.parquet"
 val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSS")
 val startTimeStamp = OffsetDateTime.now().format(dateTimeFormatter)
-
-// COMMAND ----------
-
-val tableName = Paths.get(pathToProcess)
- val sourceDF = loadParquet(pathToProcess).withColumn("rawLayerProcessingTime",current_timestamp())
-
-// COMMAND ----------
-
-display(sourceDF.limit(10))
 
 // COMMAND ----------
 
